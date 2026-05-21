@@ -1,7 +1,11 @@
 <script setup lang="ts">
-
+import CartView from './views/CartView.vue'
 </script>
 
 <template>
-  <h1>Hello World</h1>
+  <CartView />
 </template>
+
+<style>
+@import 'style.css';
+</style>
