@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useCart } from '../composables/useCart'
-// import CartItemComponent from '../components/CartItemComponent.vue'
+import CartItemComponent from '../components/CartItemComponent.vue'
 
 const { 
   cartList, 
