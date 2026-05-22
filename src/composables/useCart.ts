@@ -22,7 +22,7 @@ export function useCart() {
         }
     })
 
-    const totalItem = computed<number>(() => {
+    const totalItems = computed<number>(() => {
         return cartList.value
             .filter(item => item.checked)
             .reduce((total, item) => total + item.quantity, 0)
@@ -49,7 +49,7 @@ export function useCart() {
     return {
         cartList,
         isAllChecked,
-        totalItem,
+        totalItems,
         totalPrice,
         removeItem,
         removeSelectedItems,
