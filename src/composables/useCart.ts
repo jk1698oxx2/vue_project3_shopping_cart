@@ -29,9 +29,11 @@ export function useCart() {
     })
 
     const totalPrice = computed<number>(() => {
-        return cartList.value
+        const rawTotal = cartList.value
             .filter(item => item.checked)
             .reduce((total, item) => total + item.price * item.quantity, 0)
+            
+        return hasDiscount.value ? rawTotal * 0.8 : rawTotal
     })
 
     const removeItem = (id: number) => {
@@ -46,6 +48,8 @@ export function useCart() {
         cartList.value = []
     }
 
+    const hasDiscount = ref<boolean>(false)
+
     return {
         cartList,
         isAllChecked,
@@ -53,6 +57,7 @@ export function useCart() {
         totalPrice,
         removeItem,
         removeSelectedItems,
-        clearCart
+        clearCart,
+        hasDiscount
     }
 }

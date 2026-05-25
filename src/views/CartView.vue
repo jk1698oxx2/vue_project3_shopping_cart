@@ -9,7 +9,8 @@ const {
   totalPrice, 
   removeItem, 
   removeSelectedItems, 
-  clearCart 
+  clearCart,
+  hasDiscount
 } = useCart()
 </script>
 
@@ -44,6 +45,16 @@ const {
         Your shopping cart is empty.
       </div>
     </section>
+
+    <div class="coupon-section">
+      <label class="coupon-label">
+        <input type="checkbox" v-model="hasDiscount" class="custom-checkbox">
+        <div class="coupon-text">
+          <span class="coupon-tag">20% OFF</span>
+          <span>Apply 80% discount coupon to this order</span>
+        </div>
+      </label>
+    </div>
 
     <!-- 3. 底部結算浮動欄 -->
     <footer class="cart-footer-bar">

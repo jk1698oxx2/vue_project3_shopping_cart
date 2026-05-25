@@ -254,3 +254,38 @@ body {
   font-size: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
+
+/* 優惠券區塊 */
+.coupon-section {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-top: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px dashed #cbd5e1; /* 虛線營造優惠券感 */
+}
+
+.coupon-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.coupon-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #334155;
+}
+
+/* 優惠券的 8 折小標籤 */
+.coupon-tag {
+  background-color: #fef2f2;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #fee2e2;
+}
